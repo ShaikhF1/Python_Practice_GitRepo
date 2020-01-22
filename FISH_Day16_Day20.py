@@ -93,8 +93,71 @@
 # print(resp)
 ############################################################
 ####Day-19- Question-75
+##Please write a program to randomly print a integer number between 7 and 15 inclusive.
+# import random
+# print (random.randrange(7,16))
+############################################################
+###Question-76-Write a program to compress and decompress the string "hello world!hello world!hello world!"
+# import zlib
+# s = "hello world!hello world!hello world!hello world!"
+# t = zlib.compress(s)
+# print (t)
+# # print(zlib.decompress(t))
+############################################################
+##Question-77- Write a program to print the running time of excecution of '1+1' for 100 times.
+# import datetime
 
+# before = datetime.datetime.now()
+# for i in range(100):
+#     x = 1 + 1
+# after = datetime.datetime.now()
+# execution_time = after - before
+# print(execution_time.microseconds)
+############################################################
+###Question-78- Please write a program to shuffle and print the list [3,6,7,8].
+# import random
+# lst = [3,6,7,8]
+# random.shuffle(lst)
+# print(lst)
+############################################################
+###Question-79- Please write a program to generate all senteneces where subjects is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hokey","Football"]
+# subjects = ["I", "You"]
+# verbs = ["Play", "Love"]
+# objects = ["Hockey", "Football"]
 
+# for sub in subjects:
+#     for verb in verbs:
+#         for obj in objects:
+#             print("{} {} {}".format(sub,verb,obj))
+############################################################
+###Day-20-Question-80
+##Please write a program to print the list after removing even numbers in [5,6,77,45,22,12,24].
+# def isEven(n):
+#     return n%2 !=0
+# li = [5,6,77,45,22,12,24]
+# lst = list(filter(isEven, li))
+# print(lst)
+############################################################
+###Quesion-81- By using list comprehension, please write a program to print the list after removing numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].***
+# li = [12,24,35,70,88,120,155]
+# li  = [x for x in li if x % 35 !=0]
+# print(li)
+############################################################
+##Question-81- By using list comprehension, please write a program to print the list
+##after removing th 0th, 2nd, 4th and 6th numbers in [12,24,35,70,88,120,155].
+# li = [12,24,35,70,88,120,155]
+# li = [li[i] for i in range(len(li)) if i%2 !=0]
+# print(li)
+############################################################
+###Question-82 -By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].
+# li = [12,24,35,70,88,120,155]
+# li = [li[i] for i in range(len(li)) if i%2 !=0]
+# print(li)
+############################################################
+###Question-83- By using list comprehension, please write a program to print the list after removing the 2nd - 4th numbers in [12,24,35,70,88,120,155].
+li = [12,24,35,70,88,120,155]
+li = [li[i] for i in range(len(li)) if i<3 or 4< i]
+print(li)
 
 
 
